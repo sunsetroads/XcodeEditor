@@ -1,4 +1,4 @@
-## Xcode-Tools 
+## XcodeEditor 
 一套 Xcode 脚本工具集，用于自动化配置 Xcode 和导出 ipa 包。
 
 Xcode 配置包括对工程中 General、Capability、Info、Build Settgings、Build Phases 相关参数的修改，以及添加文件和系统库。
@@ -46,9 +46,9 @@ Package.build (project_path, ipa_path, plist)
 ```
 from xcodetools import Xcode
 
-config_path = './config.ini'
+config_path = './test.ini'
 
-project_path = '/Users/zhangning/Desktop/testpbx'
+project_path = './demo'
 
 # 根据 config.ini 修改 xcode
 Xcode.modify (project_path, config_path)
@@ -60,11 +60,11 @@ Package 模块用于自动化打包，打包时需要指定一个 plist 文件�
 ```
 from xcodetools import Package
 
-project_path = '/Users/zhangning/Desktop/testpbx'
+project_path = './demo'
+
+plist = './dev.plist'
 
 ipa_path = '/Users/zhangning/Desktop/IPA/test.ipa'
-
-plist = '/Users/zhangning/Desktop/ExportOptions.plist'
 
 # 开始自动打包
 Package.build (project_path, ipa_path, plist)
