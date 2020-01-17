@@ -3,12 +3,13 @@
 
 Xcode 配置包括对工程中 General、Capability、Info、Build Settgings、Build Phases 相关参数的修改，以及添加文件和系统库。
 
-此插件非常适用于 Untiy 开发，[点击这里](https://sunsetroads.github.io/2019/11/11/untiy-export-ipa/) 可以查看从 Untiy 工程到 iOS 包的自动化配置流程。
+此脚本比较适用于 Untiy 开发自动化打 iOS 包，[这里](https://sunsetroads.github.io/2019/11/11/untiy-export-ipa/) 可以查看从 Untiy 工程到 iOS 包的整个自动化配置流程。
 
 #### [安装说明](./INSTALL.md)
 
 ### 快速开始
-按需求修改 [test.ini](./test.ini) 配置，然后执行 tesh.sh：
+
+安装完成后，进入脚本配置一下 tesh.sh 然后执行，之后就可以去 Xcode 工程中检查你的配置是否生效：
 ```
 # .ini 包含了对 Xcode 各项设置的配置
 ini='./test.ini'
@@ -29,7 +30,7 @@ python3 ./test.py ${ini} ${project} ${ipapath} ${plist}
 
 **Xcode**
 
-根据配置文件修改 Xcode 中的相关参数，配置规则在 [test.ini](./test.ini) 文件中有详细说明。
+Xcode 模块会根据配置文件修改 Xcode 中的相关参数，配置规则在 [test.ini](./test.ini) 文件中有详细说明，使用时要根据需求加以修改。
 ```
 from xcodetools import Xcode
 
