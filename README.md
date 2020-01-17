@@ -12,12 +12,16 @@ Xcode 配置包括对工程中 General、Capability、Info、Build Settgings、B
 ```
 # .ini 包含了对 Xcode 各项设置的配置
 ini='./test.ini'
+
 # Xcode 工程路径
 project='./demo'
+
 # 手动打包时生成的 ExportOption.plsit
 plist='./dev.plist'
+
 # 最终生成的 ipa 路径
 ipapath='/Users/zhangning/Desktop/package/test.ipa'
+
 python3 ./test.py ${ini} ${project} ${ipapath} ${plist}
 ```
 
