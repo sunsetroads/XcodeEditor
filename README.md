@@ -8,34 +8,17 @@ Xcode 配置包括对工程中 General、Capability、Info、Build Settgings、B
 #### [安装说明](./INSTALL.md)
 
 ### 快速开始
-
+按需求修改 [test.ini](./test.ini) 配置，然后执行 tesh.sh：
 ```
-from xcodetools import *
-import sys
-
-# 获取执行脚本的参数
-
-if len (sys.argv) < 5:
-        print ('''
-                usage:
-                        请按以下方式启动 (需要在 ini 文件中完成所需配置)
-                        python3 [.ini 配置文件路径] [xcode 工程路径] [ipa 存放路径] [ExportOption.plist 路径]
-                ''')
-        exit ()
-
-config_path = sys.argv [1]
-
-project_path = sys.argv [2]
-
-ipa_path = sys.argv [3]
-
-plist = sys.argv [4]
-
-# 根据配置文件修改 xcode 工程的各项配置
-Xcode.modify (project_path, config_path)
-
-# 开始打包
-Package.build (project_path, ipa_path, plist)
+# .ini 包含了对 Xcode 各项设置的配置
+ini='./test.ini'
+# Xcode 工程路径
+project='./demo'
+# 手动打包时生成的 ExportOption.plsit
+plist='./dev.plist'
+# 最终生成的 ipa 路径
+ipapath='/Users/zhangning/Desktop/package/test.ipa'
+python3 ./test.py ${ini} ${project} ${ipapath} ${plist}
 ```
 
 ### 模块说明
