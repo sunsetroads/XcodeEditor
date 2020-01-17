@@ -9,7 +9,7 @@ Xcode 配置包括对工程中 General、Capability、Info、Build Settgings、B
 
 ### 快速开始
 
-安装完成后，进入脚本配置一下 tesh.sh 然后执行，之后就可以去 Xcode 工程中检查你的配置是否生效：
+安装完成后，进入脚本目录配置一下 tesh.sh 然后执行，之后就可以去 Xcode 工程中检查你的配置是否生效：
 ```
 # .ini 包含了对 Xcode 各项设置的配置
 ini='./test.ini'
