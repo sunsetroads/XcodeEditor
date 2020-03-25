@@ -1,7 +1,7 @@
 ## XcodeEditor
 一套 Xcode 脚本工具集，根据 .ini 文件的配置信息，自动化修改 Xcode 配置和导出 ipa 包。
 
-Xcode 配置包括对工程中 General、Capability、Info、Build Settgings、Build Phases 相关参数的修改，以及添加文件和系统库等。
+修改 Xcode 配置是指对 Xcode 工程的 General、Capability、Info、Build Settgings、Build Phases 中的参数进行修改，以及添加文件和 Framework 等。
 
 **[安装说明](./INSTALL.md)**
 
@@ -17,7 +17,7 @@ git clone git@github.com:sunsetroads/XcodeEditor.git
 ```
 cd XcodeEditor
 ```
-修改 example.ini 中的配置，然后运行：
+修改 example.ini 中的参数，然后运行：
 ```
 python3 test.py
 ```
