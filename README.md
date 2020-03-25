@@ -28,7 +28,7 @@ python3 test.py
 **Xcode**
 
 根据配置文件修改 Xcode 中的相关参数，配置规则在 [example.ini](./example.ini) 文件中有详细说明。
-```
+```py
 from xcodetools import Xcode
 
 config_path = './config.ini'
@@ -42,7 +42,7 @@ Xcode.modify (project_path, config_path)
 **Package**
 
 Package 模块用于自动化打包，打包时需要指定一个 plist 文件，其中包含了包的类型和相关证书等参数。plist 文件可借助 Plist 模块来快速生成，也可以先手动打包，生成 ipa 的同时会有一个 ExportOption.plist。
-```
+```py
 from xcodetools import Package
 
 project_path = '/Users/zhangning/Desktop/testpbx'
@@ -58,7 +58,7 @@ Package.build (project_path, ipa_path, plist)
 **XClass**
 
 XClass 模块主要用于编辑 iOS 代码文件，添加内容
-```
+```py
 from xcodetools import Package
 
 class_path = '/Users/zhangning/Desktop/ChannelBridge/Classes/UnityAppController.mm'
@@ -72,7 +72,7 @@ file.add_import ('#import <XLSDK/XLApplePay.h>')
 **Plist**
 
 Plist 模块根据指定参数生成命令行打包所需 Plist 文件，参数说明和获取方式请查看注释
-```
+```py
 from xcodetools import Plist
 
 Plist.generate_export_option (
