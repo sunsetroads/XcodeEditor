@@ -10,18 +10,18 @@ Xcode 配置包括对工程中 General、Capability、Info、Build Settgings、B
 
 ### 快速开始
 
-修改此工程目录下的 example.ini 中的配置，然后运行：
+clone 此项目后，进入工程根目录：
 ```
 git clone git@github.com:sunsetroads/XcodeEditor.git
 ```
 ```
 cd XcodeEditor
 ```
-
+修改 example.ini 中的配置，然后运行：
 ```
 python3 test.py
 ```
-即可在 demo 工程中查看效果。
+之后就可以在 demo 工程中查看效果。
 
 ### 模块说明
 
